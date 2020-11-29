@@ -1,0 +1,6 @@
+/* custom style */
+
+.fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+}
