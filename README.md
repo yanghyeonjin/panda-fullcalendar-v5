@@ -6,3 +6,6 @@
   - titleFormat
 - Sizing
   - contentHeight
+- Month View
+  - fixedWeekCount
+  - showNonCurrentDates
