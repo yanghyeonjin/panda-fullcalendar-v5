@@ -4,3 +4,5 @@
 - Toolbar
   - headerToolbar
   - titleFormat
+- Sizing
+  - contentHeight
