@@ -9,3 +9,5 @@
 - Month View
   - fixedWeekCount
   - showNonCurrentDates
+- Date & Time Display
+  - dayHeaderContent
