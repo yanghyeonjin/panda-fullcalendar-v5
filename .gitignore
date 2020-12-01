@@ -3,3 +3,6 @@ fullcalendar-5.4.0/
 
 # MacOS
 .DS_Store
+
+# server
+server/node_modules

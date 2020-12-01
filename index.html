@@ -26,6 +26,18 @@
             let weekList = ["일", "월", "화", "수", "목", "금", "토"];
             return weekList[date.dow];
           },
+          //   datesSet: function (dateInfo) {
+          //     // date의 set이 처음 초기화 되거나 변경되었을 때
+          //     // 처음 진입했을 때, prev 또는 next 버튼 눌렀을 때 실행되는 것 같음.
+          //     console.log(dateInfo);
+          //   },
+          events: {
+            url: "http://localhost:3000/events",
+            method: "GET",
+            failure: function () {
+              alert("there was an error while fetching events!");
+            },
+          },
         });
         calendar.render();
       });
