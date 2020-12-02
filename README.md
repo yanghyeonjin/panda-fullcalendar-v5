@@ -13,3 +13,5 @@
   - dayHeaderContent
 - Event Sources
   - events (as a json feed)
+- Date Clicking & Selecting
+  - dateClick

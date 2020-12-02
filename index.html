@@ -38,6 +38,27 @@
               alert("there was an error while fetching events!");
             },
           },
+          dateClick: function (dateClickInfo) {
+            const gray = "#787878";
+            // looks like single selection
+            // // get all fc-day element
+            // const fcDayElements = document.querySelectorAll(
+            //   ".fc-daygrid-day.fc-day"
+            // );
+            // // init background color found element
+            // fcDayElements.forEach((element, key, parent) => {
+            //   element.style.backgroundColor = "";
+            // });
+            // // set background color clicked Element
+            // dateClickInfo.dayEl.style.backgroundColor = gray;
+
+            // looks like multi-selection
+            if (dateClickInfo.dayEl.style.backgroundColor) {
+              dateClickInfo.dayEl.style.backgroundColor = "";
+            } else {
+              dateClickInfo.dayEl.style.backgroundColor = gray;
+            }
+          },
         });
         calendar.render();
       });
