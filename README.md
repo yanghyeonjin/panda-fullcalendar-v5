@@ -11,7 +11,7 @@
   - showNonCurrentDates
 - Date & Time Display
   - dayHeaderContent
-- Event Sources
-  - events (as a json feed)
 - Date Clicking & Selecting
   - dateClick
+- Event Sources
+  - events (as a json feed)
