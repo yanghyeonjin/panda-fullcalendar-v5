@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors"); // cors 처리
 const app = express();
-const port = 3000;
+const port = 4000;
 
 // cors
 app.use(cors());
@@ -16,18 +16,18 @@ app.get("/events", (req, res) => {
     },
     {
       title: "Event 1",
-      start: "2020-12-08T09:00:00",
-      end: "2020-12-08T18:00:00",
+      start: "2020-12-12T09:00:00",
+      end: "2020-12-12T18:00:00",
     },
     {
       title: "Event 1",
-      start: "2020-12-09T07:00:00",
-      end: "2020-12-09T15:00:00",
+      start: "2020-12-19T07:00:00",
+      end: "2020-12-19T15:00:00",
     },
     {
       title: "Event 2",
-      start: "2020-12-08",
-      end: "2020-12-10",
+      start: "2020-12-26",
+      end: "2020-12-26",
     },
   ];
 
