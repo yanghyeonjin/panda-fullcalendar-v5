@@ -6,14 +6,22 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="fullcalendar/main.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
+      document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        function firstIconClickHandler() {
+          console.log('나는 첫 번째 아이콘!');
+        }
+        function secondIconClickHandler() {
+          console.log('나는 두 번째 아이콘!');
+        }
+
         var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
+          initialView: 'dayGridMonth',
           headerToolbar: {
-            start: "",
-            center: "prev title next",
-            end: "today",
+            start: '',
+            center: 'prev title next',
+            end: 'today',
           },
           titleFormat: function (date) {
             // YYYY년 MM월
@@ -23,7 +31,7 @@
           fixedWeekCount: false,
           showNonCurrentDates: true,
           dayHeaderContent: function (date) {
-            let weekList = ["일", "월", "화", "수", "목", "금", "토"];
+            let weekList = ['일', '월', '화', '수', '목', '금', '토'];
             return weekList[date.dow];
           },
           //   datesSet: function (dateInfo) {
@@ -32,17 +40,36 @@
           //     console.log(dateInfo);
           //   },
           events: {
-            url: "http://localhost:4000/events",
-            method: "GET",
+            url: 'http://localhost:4000/events',
+            method: 'GET',
             failure: function () {
-              alert("there was an error while fetching events!");
+              alert('there was an error while fetching events!');
             },
           },
           eventContent: {
-            html: `<div><img src="./event_icon.svg" class="event-icon" />some html</div>`,
+            html: `<div>
+                    <img src="./event_icon.svg" class="event-icon first" />
+                    <img src="./bell.svg" class="event-icon second" />
+                    some html
+                  </div>`,
+          },
+          eventDidMount: function (arg) {
+            const firstIconElements = document.querySelectorAll(
+              '.event-icon.first'
+            );
+            const secondIconElements = document.querySelectorAll(
+              '.event-icon.second'
+            );
+
+            firstIconElements.forEach((element, key, parent) => {
+              element.addEventListener('click', firstIconClickHandler);
+            });
+            secondIconElements.forEach((element, key, parent) => {
+              element.addEventListener('click', secondIconClickHandler);
+            });
           },
           dateClick: function (dateClickInfo) {
-            const gray = "#787878";
+            const gray = '#787878';
             // looks like single selection
             // // get all fc-day element
             // const fcDayElements = document.querySelectorAll(
@@ -57,7 +84,7 @@
 
             // looks like multi-selection
             if (dateClickInfo.dayEl.style.backgroundColor) {
-              dateClickInfo.dayEl.style.backgroundColor = "";
+              dateClickInfo.dayEl.style.backgroundColor = '';
             } else {
               dateClickInfo.dayEl.style.backgroundColor = gray;
             }
