@@ -10,22 +10,22 @@ app.get("/events", (req, res) => {
   // 이벤트 데이터
   const events = [
     {
-      title: "Event 1",
+      title: "A",
       start: "2020-12-05T09:00:00", // 시간까지 표시하려면 이렇게 표현!
       end: "2020-12-05T18:00:00",
     },
     {
-      title: "Event 1",
+      title: "B",
       start: "2020-12-12T09:00:00",
       end: "2020-12-12T18:00:00",
     },
     {
-      title: "Event 1",
+      title: "C",
       start: "2020-12-19T07:00:00",
       end: "2020-12-19T15:00:00",
     },
     {
-      title: "Event 2",
+      title: "D",
       start: "2020-12-26",
       end: "2020-12-26",
     },
