@@ -1,5 +1,7 @@
 # FullCalendar Practice
 
+# [FullCalendar v6 연습하기 Repo에서 이어집니다^^](https://github.com/yanghyeonjin/fullcalendar-v6-practice)
+
 - Getting Started
 - Toolbar
   - headerToolbar
